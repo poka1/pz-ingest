@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sh "echo scanning" 
-// Fortify Scan
+# Fortify Scan
 sh "/opt/hp_fortify_sca/bin/sourceanalyzer -b ${env.BUILD_NUMBER} **/*.java" 
 sh "/opt/hp_fortify_sca/bin/sourceanalyzer -b ${env.BUILD_NUMBER}  -scan -f fortifyResults-${env.BUILD_NUMBER}.fpr" 
 
